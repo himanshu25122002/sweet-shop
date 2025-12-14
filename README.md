@@ -123,7 +123,7 @@ This TDD Kata project demonstrates modern web development practices including Te
 
 ## Live Demo
 **Deployed application link:**
-`https://sweet-shop-managemen-hkhi.bolt.host`
+[Deployment](https://sweet-shop-managemen-hkhi.bolt.host)
 
 
 ### Screenshots
