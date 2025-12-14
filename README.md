@@ -11,7 +11,7 @@ This TDD Kata project demonstrates modern web development practices including Te
 - **User Authentication**: Secure registration and login system using Supabase Authentication
 - **Role-Based Access Control**: Separate user and admin roles with different permissions
 - **Inventory Management**: Full CRUD operations for sweet products (admin only)
-- **Purchase System**: Users can purchase sweets with real-time stock updates
+- **Purchase System**: Users can purchase sweets with inventory updates synchronized via Supabase
 - **Restock Functionality**: Admins can restock inventory with quantity management
 - **Search & Filter**: Advanced search and filtering by name, category, and price range
 - **Responsive Design**: Beautiful, modern UI that works on all devices
@@ -61,7 +61,7 @@ This TDD Kata project demonstrates modern web development practices including Te
 - **Row Level Security (RLS)** enabled on all tables
 - **Authenticated-only access** for all sweet operations
 - **Admin-only permissions** for create, update, delete, and restock operations
-- **JWT token validation** for all API requests
+- **Authentication and authorization** handled via Supabase Auth and Row Level Security
 - **SQL injection protection** through Supabase client parameterized queries
 - **Password hashing** handled by Supabase Auth
 
@@ -111,8 +111,6 @@ This TDD Kata project demonstrates modern web development practices including Te
    - Find your user and note their ID
    - Go to Table Editor > user_profiles
    - Update the role field for your user from 'user' to 'admin'
-
-   Alternatively, you can use the demo credentials:
    -Admin role can be assigned manually via the Supabase dashboard.
 
 
@@ -287,23 +285,6 @@ I utilized **Claude 3.5 Sonnet** (Anthropic's AI assistant) through the Bolt.new
 - **Integration Testing**: Manually tested the full user flow from registration to purchase
 - **Error Handling**: Added specific error messages and user feedback for edge cases
 - **Code Organization**: Structured files and folders for maintainability and scalability
-
-### Reflection on AI Impact
-
-**Positive Impacts:**
-- **Speed**: AI accelerated development significantly, especially for boilerplate code and initial setups
-- **Best Practices**: AI consistently suggested modern patterns and security best practices
-- **Learning**: Exposed me to new patterns and approaches I might not have considered
-- **Testing**: AI helped structure comprehensive test coverage from the start
-
-**Challenges:**
-- **Context Understanding**: AI sometimes needed multiple iterations to understand specific business requirements
-- **Mock Complexity**: Test mocking for Supabase required manual intervention due to complex async patterns
-- **Over-Engineering**: AI sometimes suggested more complex solutions than needed; simplification was manual
-- **Verification**: All AI-generated code required manual review and testing to ensure correctness
-
-**Overall Assessment:**
-AI was an invaluable pair-programming partner that handled tedious tasks and provided solid starting points. However, critical thinking, business logic decisions, and quality assurance remained essential human responsibilities. The combination of AI efficiency and human oversight resulted in a production-quality application developed in a fraction of the usual time.
 
 
 ## Future Enhancements
