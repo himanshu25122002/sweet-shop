@@ -8,14 +8,14 @@ This TDD Kata project demonstrates modern web development practices including Te
 
 ### Key Features
 
-- **User Authentication**: Secure registration and login system with JWT-based authentication via Supabase
+- **User Authentication**: Secure registration and login system using Supabase Authentication
 - **Role-Based Access Control**: Separate user and admin roles with different permissions
 - **Inventory Management**: Full CRUD operations for sweet products (admin only)
 - **Purchase System**: Users can purchase sweets with real-time stock updates
 - **Restock Functionality**: Admins can restock inventory with quantity management
 - **Search & Filter**: Advanced search and filtering by name, category, and price range
 - **Responsive Design**: Beautiful, modern UI that works on all devices
-- **Real-time Updates**: Live inventory updates across all users
+- **Real-time Updates**: Inventory updates synchronized via Supabase client
 
 ## Technology Stack
 
@@ -88,7 +88,7 @@ This TDD Kata project demonstrates modern web development practices including Te
 
 3. **Environment Configuration**
 
-   The `.env` file is already configured with Supabase credentials. For production, you would create your own Supabase project and update these values:
+   Create a .env file and configure your Supabase credentials as shown below:
 
    ```env
    VITE_SUPABASE_URL=your_supabase_url
@@ -113,8 +113,8 @@ This TDD Kata project demonstrates modern web development practices including Te
    - Update the role field for your user from 'user' to 'admin'
 
    Alternatively, you can use the demo credentials:
-   - Email: `admin@sweetshop.com`
-   - Password: `admin123`
+   -Admin role can be assigned manually via the Supabase dashboard.
+
 
 6. **Start the development server**
    ```bash
@@ -235,15 +235,10 @@ sweet-shop-management/
 
 ## Development Workflow
 
-This project was developed following TDD and clean code principles:
-
-1. **Write Tests First**: Tests were written before implementation to define expected behavior
-2. **Red-Green-Refactor**: Follow the TDD cycle
-   - Red: Write a failing test
-   - Green: Write minimal code to pass the test
-   - Refactor: Improve code while keeping tests green
-3. **Frequent Commits**: Each feature and fix is committed with clear messages
-4. **Code Review Ready**: Code is clean, documented, and follows best practices
+This project follows Test-Driven Development (TDD) principles:
+- Tests written before implementation
+- Incremental development and refactoring
+- Automated test coverage for core features
 
 ## My AI Usage
 
@@ -283,15 +278,6 @@ I utilized **Claude 3.5 Sonnet** (Anthropic's AI assistant) through the Bolt.new
    - Improved type safety and TypeScript usage
    - Enhanced error handling and user feedback mechanisms
 
-### Specific Examples
-
-- **Database Schema**: AI helped design the user_profiles and sweets tables with proper relationships, constraints, and RLS policies. I provided the requirements, and AI generated the SQL with security best practices.
-
-- **Authentication Flow**: AI generated the AuthContext provider with proper session management and error handling. I manually reviewed and adjusted the onAuthStateChange implementation to avoid async/await deadlocks as per Supabase best practices.
-
-- **Component Architecture**: AI created the initial SweetCard component with all necessary features. I then refined the styling and added additional admin controls based on user role.
-
-- **Testing Strategy**: AI generated comprehensive test cases for authentication and components. While some tests had mocking complexities, the test structure and assertions were solid foundations.
 
 ### What I Did Manually
 
@@ -319,19 +305,6 @@ I utilized **Claude 3.5 Sonnet** (Anthropic's AI assistant) through the Bolt.new
 **Overall Assessment:**
 AI was an invaluable pair-programming partner that handled tedious tasks and provided solid starting points. However, critical thinking, business logic decisions, and quality assurance remained essential human responsibilities. The combination of AI efficiency and human oversight resulted in a production-quality application developed in a fraction of the usual time.
 
-## Git Commit History
-
-The commit history demonstrates the TDD approach with clear, descriptive messages. Example commits include:
-
-- `feat: Set up database schema with RLS policies`
-- `feat: Implement authentication context with Supabase`
-- `test: Add AuthContext test suite`
-- `feat: Create AuthForm component with login/register`
-- `feat: Build Dashboard with search and filters`
-- `feat: Implement admin CRUD operations`
-- `test: Add SweetCard component tests`
-- `refactor: Improve error handling in purchase flow`
-- `docs: Add comprehensive README`
 
 ## Future Enhancements
 
