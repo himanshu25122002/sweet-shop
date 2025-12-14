@@ -128,11 +128,11 @@ This TDD Kata project demonstrates modern web development practices including Te
 
 ### Screenshots
 
-![Login Page](screenshots/Screenshot 2025-12-14 164314.png)
+![Login Page](screenshots/Screenshot%2025-12-14%164314.png)
 
-![Create Account](screenshots/Screenshot 2025-12-14 164321.png)
+![Create Account](screenshots/Screenshot%2025-12-14%164321.png)
 
-![Dashboard](screenshots/Screenshot 2025-12-14 164449.png)
+![Dashboard](screenshots/Screenshot%2025-12-14%164449.png)
 
 ### Running Tests
 
