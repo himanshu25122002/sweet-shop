@@ -1,5 +1,5 @@
-# Sweet Shop Management System   [Deployed](https://sweet-shop-managemen-hkhi.bolt.host)
-
+# Sweet Shop Management System   
+**Click on:-** [Deployed](https://sweet-shop-managemen-hkhi.bolt.host)
 A full-stack web application for managing a sweet shop inventory with user authentication, role-based access control, and comprehensive inventory management features.
 
 ## Project Overview
