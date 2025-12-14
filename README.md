@@ -121,6 +121,16 @@ This TDD Kata project demonstrates modern web development practices including Te
 
    The application will be available at `http://localhost:5173`
 
+## Live Demo
+**Deployed application link:**
+`https://sweet-shop-managemen-hkhi.bolt.host`
+
+
+### Screenshots
+
+
+
+
 ### Running Tests
 
 ```bash
